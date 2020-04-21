@@ -40,12 +40,14 @@ image:
 		--build-arg SCHEMA_BUILD_VERSION="$(SCHEMA_BUILD_VERSION)" \
 		--build-arg SCHEMA_CMD="$(SCHEMA_CMD)" \
 		--tag michalbarczyk/io-lab-docker-ci-public:latest \
+		--tag michalbarczyk/io-lab-docker-ci-public:"$(TAG)"
 		
 	
   # TODO: last part of this command that tags just built image with a specyfic tag
 	
 push: image
 	docker push michalbarczyk/io-lab-docker-ci-public:latest
+	dicker push michalbarczyk/io-lab-docker-ci-public:"$(TAG)"
 	# TODO: two commands, first pushes the latest image, second pushes the image tagged with specyfic tag
 	
 clean:
