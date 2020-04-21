@@ -39,7 +39,7 @@ image:
 		--build-arg SCHEMA_BUILD_DATE="$(SCHEMA_BUILD_DATE)" \
 		--build-arg SCHEMA_BUILD_VERSION="$(SCHEMA_BUILD_VERSION)" \
 		--build-arg SCHEMA_CMD="$(SCHEMA_CMD)" \
-		--tag michalbarczyk/io-lab-docker-ci-public:latest \	
+		--tag michalbarczyk/io-lab-docker-ci-public:latest \
 		
 	
   # TODO: last part of this command that tags just built image with a specyfic tag
