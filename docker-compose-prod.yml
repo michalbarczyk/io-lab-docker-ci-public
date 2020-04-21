@@ -2,7 +2,10 @@
 version: '3.0'
 services:
   web:
+    image: "michalbarczyk/io-lab-docker-ci-public:latest"
     # TODO: image, ports and redis dependency
+    ports:
+    - "80:5000"
     environment:
       REDIS_HOST: redis
       REDIS_PORT: 6379
